@@ -1,40 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
-
-:root {
-  --black: #0a0a0a;
-  --white: #fafaf8;
-  --cream: #f5f0e8;
-  --gold: #c9a84c;
-  --gold-light: #e8c96d;
-  --gold-dark: #9c7a2e;
-  --charcoal: #1e1e1e;
-  --mid: #3a3a3a;
-  --muted: #888;
-  --border: rgba(201,168,76,0.2);
-  --card-bg: #141414;
-  --shadow: 0 20px 60px rgba(0,0,0,0.4);
-  --radius: 16px;
-  --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--black);
-  color: var(--white);
-  overflow-x: hidden;
-  line-height: 1.7;
+  margin: 0;
+  font-family: Arial;
+  background: #0a0a0a;
+  color: white;
 }
 
-/* ─── SCROLLBAR ─── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--black); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #111;
+}
 
-/* ─── TYPOGRAPHY ─── */
+.logo {
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: gold;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn.whatsapp {
+  background: green;
+  color: white;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid white;
+}
+
+/* PAGE */
+.page {
+  display: none;
+}
+
+.container {
+  padding: 40px;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* INPUT */
+input, select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/* LOADER */
+.loader {
+  display: none;
+  margin: 20px 0;
+}
+
+/* DRIVER */
+.driver-card {
+  display: none;
+  background: #111;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* FLOAT BUTTON */
+.float-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+}
+
+/* CHATBOT */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+#chat-box {
+  display: none;
+  background: #111;
+  padding: 10px;
+}/* ─── TYPOGRAPHY ─── */
 h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
 h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 900; }
 h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; }
